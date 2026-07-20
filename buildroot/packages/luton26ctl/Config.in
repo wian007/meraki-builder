@@ -1,0 +1,8 @@
+config BR2_PACKAGE_LUTON26CTL
+	bool "luton26ctl"
+	help
+	  Minimal register-level diagnostic tool for the Vitesse/Microchip
+	  Luton26 switch ASIC (VSC7425/VSC7427) used in the MS220-8(P)/24(P)
+	  and MS22(P) switches. Reads CHIP_ID and per-port PCS1G link status
+	  directly via /dev/mem. Register offsets are taken from Microchip's
+	  MIT-licensed MESA switch API (github.com/microchip-ung/mesa).

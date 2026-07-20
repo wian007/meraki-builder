@@ -1,0 +1,10 @@
+--- package/Config.in	2023-05-07 00:00:00.000000000 +0000
++++ package/Config.in	2023-05-07 00:00:01.000000000 +0000
+@@ -1720,6 +1720,7 @@
+ 	source "package/pcsc-lite/Config.in"
+ 	source "package/rpi-rgb-led-matrix/Config.in"
+ 	source "package/tslib/Config.in"
++	source "package/luton26ctl/Config.in"
+ 	source "package/uhd/Config.in"
+ 	source "package/urg/Config.in"
+ endmenu

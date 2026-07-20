@@ -2259,6 +2259,7 @@ BR2_PACKAGE_MRAA_ARCH_SUPPORTS=y
 # BR2_PACKAGE_OWFS is not set
 # BR2_PACKAGE_PCSC_LITE is not set
 # BR2_PACKAGE_TSLIB is not set
+BR2_PACKAGE_LUTON26CTL=y
 
 #
 # uhd needs a toolchain w/ C++, NPTL, wchar, dynamic library
