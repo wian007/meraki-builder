@@ -12,10 +12,12 @@ deps:
 	if [ ! -d src/meraki-builder ]; then git clone https://github.com/halmartin/meraki-builder.git src/meraki-builder; else cd src/meraki-builder && git pull && cd ../../; fi
 	cd src/buildroot/board && ln -sf ../../meraki-builder/buildroot/board/meraki . && cd ../../../
 	cd src/buildroot/package && ln -sf ../../meraki-builder/buildroot/packages/pd690xx . && cd ../../../
+	cd src/buildroot/package && ln -sf ../../meraki-builder/buildroot/packages/find_hdr findhdr && cd ../../../
+	cd src/buildroot/package && ln -sf ../../meraki-builder/buildroot/packages/luton26ctl . && cd ../../../
 	cd src/buildroot && for p in $(patches); do patch -p0 < ../meraki-builder/buildroot/patches/$$p; done && cd ../../
 
 docker-image:
-	docker build -t ubuntu1804-buildroot -f Dockerfile ${mktemp -d}
+	docker build -t ubuntu1804-buildroot -f Dockerfile .
 
 docker-build-dbg:
 	docker run -it --rm -v $(current_dir)/src:/src --entrypoint=/bin/bash ubuntu1804-buildroot
